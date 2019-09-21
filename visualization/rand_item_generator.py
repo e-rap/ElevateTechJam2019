@@ -4,7 +4,7 @@ from random import seed
 from random import randint
 
 # seed random number generator
-seed(1)
+seed(2)
 
 class rand_item_generator:
     

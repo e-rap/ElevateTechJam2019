@@ -9,7 +9,11 @@ Created on Sat Sep 21 11:35:16 2019
 import json
 import requests
 
+from rand_item_generator import *
+
 catergory_type = "Shopping"
+item_scan = rand_item_generator()
+total = 0
 
 #read in all customer information
 with open('response_1569075691492.json') as json_file:
@@ -27,13 +31,20 @@ for p in customers["customers"]:
         )
         
         for transaction in response_data["result"]:
+            total = 0
             if transaction['categoryTags'][0] == catergory_type:
                 #Determine amount paid
                 amount = float(transaction['currencyAmount'])
                 
+                transaction['id']={'identifier': '4806f34e-ff1e456a-88f2-4f35-b99f-0deb4332b599', 'items': []}
                 
-                transaction['id']=[transaction['id']]
-                transaction['id'].append('milk')
+                while total < amount:
+                    item = item_scan.get_item()
+                    print(item)
+                    item = json.loads(item)
+                    transaction['id']['items'].append(item)
+                    total+=item['price']
+                
         with open(p['id']+'.json', 'w') as outfile:
             json.dump(response_data, outfile)
         counter+=1
