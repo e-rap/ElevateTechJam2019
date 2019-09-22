@@ -13,15 +13,49 @@ class rand_item_generator:
         self.__items_list = [
         {"name" : "Milk",
         'price': 2,
-        'recylable' : 1,
+        'recylable' : 0,
         'co2_emissions' : 1} ,         
         {"name" : "Tea",
         'price': 4,
-        'recylable' : 1,
+        'recylable' : 0,
         'co2_emissions' : 2},
         {"name" : "Fruits",
         'price': 3,
         'recylable' : 1,
+<<<<<<< HEAD
+        'co2_emissions' : 3},
+        {"name" : "Cereals",
+        'price': 7,
+        'recylable' : 0,
+        'co2_emissions' : 3},
+        {"name" : "Butter",
+        'price': 3,
+        'recylable' : 1,
+        'co2_emissions' : 6},
+        {"name" : "Cigarettes",
+        'price': 30,
+        'recylable' : 0,
+        'co2_emissions' : 5},
+        {"name" : "Tissues",
+        'price': 9,
+        'recylable' : 1,
+        'co2_emissions' : 1},
+        {"name" : "Local Chicken",
+        'price': 15,
+        'recylable' : 1,
+        'co2_emissions' : 0},
+
+        {"name" : "Kraft Slices",
+        'price': 8,
+        'recylable' : 1,
+        'co2_emissions' : 7},
+
+        {"name" : "Plastic Bags",
+        'price': 3,
+        'recylable' : 0,
+        'co2_emissions' : 10}
+
+=======
         'co2_emissions' : 0.5},
         {"name" : "Vegetables",
         'price': 5,
@@ -67,6 +101,7 @@ class rand_item_generator:
         'price': 2,
         'recylable' : 0,
         'co2_emissions' : 4}
+>>>>>>> 981448e43dd5bdb401e8994ab2167b2b2ec112ec
         ]
 
     def get_item(self):
